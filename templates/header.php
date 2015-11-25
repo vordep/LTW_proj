@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="assets/img/favicon.ico">
 
-	<meta charset="utf-8">
-	<title>Projecto LTW</title>
+		<title>Eventus</title>
+		<!-- Custom styles for this template -->
+		<link href="assets/css/footer.css" rel="stylesheet">
 
-</head>
-
-<?php include 'footer.php'; ?>
-
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
