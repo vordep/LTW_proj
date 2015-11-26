@@ -2,7 +2,7 @@
 require_once realpath(dirname(__FILE__) . "/config.php");
 include TEMPLATES_PATH .'/header.php';
 
-$currentPage = isset($_GET['page']) ? $_GET['page'] : 'signUp';
+$currentPage = isset($_GET['page']) ? $_GET['page'] : 'signIn';
 /*// add more pages as needed 
 $pagesWithMandatoryLogin = array('profile');
 
@@ -25,6 +25,10 @@ foreach ($pagesWithMandatoryLogin as $page) {
 switch($currentPage){
         case'signUp':
         include'templates/signup.php';
+        break;
+        
+    case 'signIn':
+        include'templates/signin.php';
         break;
         
 }
