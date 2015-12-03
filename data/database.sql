@@ -1,10 +1,9 @@
 DROP TABLE IF EXISTS User;
-CREATE TABLE USER (
+CREATE TABLE User(
 		idUser INTEGER PRIMARY KEY AUTOINCREMENT,
 		username VARCHAR2(50),
 		password VARCHAR2(250),
-		registerDate DATE,
-		gender VARCHAR2(10),
+		registerDate DATE
 );
 
 DROP TABLE IF EXISTS Event;

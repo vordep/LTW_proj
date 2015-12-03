@@ -7,17 +7,17 @@
   </header>
   <div class="container">
     <div id="loginform">
-        <form action="signUp.php" class ="f-signIn" method="post" >
+        <form action="actions.php?action=signIn" class ="f-signin"method="POST" >
  
      <input class="f-control"type="username" name="inputUserName" placeholder="User name " required autofocus>
   
     <input class="f-control"type="password" name= "inputPassword" placeholder="Password" required>
   
-    <input class="f-control" type="submit" placeholder="Sign In">
+            <button class="f-control" type="submit" placeholder="Sign in">Sign In</button>
     </form>
     </div>
     <div id="register">
-        <p><a id="link-signUp"href="?page=signUp"> Register</a></p>
+        <p><a id="link-signup"href="?page=signUp"> Register</a></p>
     </div>
   </div>
 </body>

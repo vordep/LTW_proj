@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/signUp.css">
+<link rel="stylesheet" href="assets/css/signIn.css">
 </head>
 <body>
   <header>
@@ -6,14 +6,18 @@
       <h3>Make Connections</h3>
   </header>
   <div class="container">
-      <form action="signUp.php" method="post">
+    <div id="loginform">
+        <form action="actions.php?action=signUp" class ="f-signin"method="POST" >
  
-    <input type="username" name="inputUserName" placeholder="User name " required autofocus>
+     <input class="f-control"type="username" name="inputUserName" placeholder="User name " required autofocus>
   
-    <input type="password" name= "inputPassword" placeholder="Password" required>
-  
-    <input type="password" name="inputconfirmPassword" placeholder="password" required>
-    <input type="submit" placeholder="submit">
+    <input class="f-control"type="password" name= "inputPassword" placeholder="Password" required>
+     <input class="f-control"type="password" name= "inputConfirmPassword" placeholder=" Confirm Password" required>
+            <button class="f-control" type="submit" placeholder="Sign in">Sign In</button>
     </form>
+    </div>
+    <div id="Sign in">
+        <p><a id="link-signin"href="?page=signIn"> Log in</a></p>
+    </div>
   </div>
 </body>

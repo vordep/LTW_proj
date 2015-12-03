@@ -14,7 +14,7 @@ defined("UPLOADS_PATH")
 or define("UPLOADS_PATH", realpath(dirname(__FILE__) . '/server/php/files'));
 
 defined("CLASSES_PATH")
-or define("CLASSES_PATH", realpath(dirname(__FILE__) . '/logic/classes'));
+or define("CLASSES_PATH", realpath(dirname(__FILE__) . '/php'));
 
 defined("DB_PATH")
 or define("DB_PATH", realpath(dirname(__FILE__) . '/data'));
