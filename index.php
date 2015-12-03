@@ -24,11 +24,11 @@ foreach ($pagesWithMandatoryLogin as $page) {
 }*/
 switch($currentPage){
         case'signUp':
-        include'templates/signup.php';
+        include'templates/signUp.php';
         break;
         
     case 'signIn':
-        include'templates/signin.php';
+        include'templates/signIn.php';
         break;
         
 }

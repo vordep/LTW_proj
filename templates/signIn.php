@@ -13,7 +13,7 @@
   
     <input class="f-control"type="password" name= "inputPassword" placeholder="Password" required>
   
-    <input class="f-control" type="submit" placeholder="Sign in">
+    <input class="f-control" type="submit" placeholder="Sign In">
     </form>
     </div>
     <div id="register">
