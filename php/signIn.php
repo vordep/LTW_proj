@@ -1,11 +1,5 @@
-
-/* 
-Sign in
-*/
-
-
 <?php
-include_once("connect.php");
+include_once("connectdb.php");
 
 try{
     $username= $_POST["inputUserName"];

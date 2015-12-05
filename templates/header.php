@@ -6,8 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="assets/img/favicon.ico">
-
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<title>Eventus</title>
 		<!-- Custom styles for this template -->
 		<link href="assets/css/footer.css" rel="stylesheet">

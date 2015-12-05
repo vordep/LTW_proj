@@ -11,6 +11,7 @@ CREATE TABLE Event (
 		idEvent INTEGER PRIMARY KEY AUTOINCREMENT,
 		idUser INTEGER NOT NULL,
 		isPublic INTEGER NOT NULL,		/* 1-publico 0-privado */
+		title VARCHAR2(100),
 		image VARCHAR2(255),
 		eventDate DATE,
 		description VARCHAR2(100),

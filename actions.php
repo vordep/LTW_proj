@@ -4,18 +4,20 @@ require_once 'config.php';
 $action = $_GET['action'] != '' ? $_GET['action'] : '';
 
 switch($action){
-    case 'signUp':{
-    include 'php/signUp.php';
-    break;
-}
-    case'signIn':{
+    case 'signUp':
+        include 'php/signUp.php';
+        break;
+    
+    case'signIn':
         include'php/signIn.php';
         break;
-    }
-        
-        
-    default:{
+    case'signOut':
+        include'php/signOut.php';
         break;
-    }
+    
+    default:
+        break;
+    
     
 }
+?>
