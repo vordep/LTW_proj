@@ -23,15 +23,21 @@ foreach ($pagesWithMandatoryLogin as $page) {
 	}
 }
 switch($currentPage){
-        case'signUp':
+    
+    case'signUp':
         include'templates/signUp.php';
         break;
         
     case 'signIn':
         include'templates/signIn.php';
         break;
+        
     case 'events':
         include'templates/events.php';
+        break;
+        
+    case 'profile':
+        include'templates/profile.php';
         break;
         
 }
