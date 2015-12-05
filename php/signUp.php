@@ -1,10 +1,5 @@
-/*
-Sign up
-*/
-
-
 <?php
-include_once("connect.php");
+include_once("connectdb.php");
 try{
     $username = $_POST["inputUserName"];
     $password =$_POST["inputPassword"];
@@ -15,7 +10,7 @@ try{
         header("Location : index.php?page=signUp.php");
         exit;
     }
-     echo "here2";
+     
     //check if the username exists
     $stmt = $db->prepare(
         'SELECT * FROM User 
@@ -42,7 +37,7 @@ try{
         header("Location : index.php?page=signIn");
         exit;
     }
-    echo "here 4 ";
+ 
     //set _Session
     $_SESSION['idUser'] = $user['idUser'];
 	$_SESSION['username'] = $username;
@@ -53,8 +48,9 @@ catch(PDOException $e){
     echo $e->getMessage();
     $_SESSION['responseContent']='Could not update database';
     header("Location : index.php?page=signUp");
-    exit;
+    exit();
 }
-header("Location index.php?page=events");
-exit;
+echo "here";
+header ("Location:index.php?page=events");
+exit();
 ?>
