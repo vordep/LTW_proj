@@ -4,7 +4,7 @@ include TEMPLATES_PATH .'/header.php';
 
 $currentPage = isset($_GET['page']) ? $_GET['page'] : 'signIn';
 // add more pages as needed 
-$pagesWithMandatoryLogin = array('events','myevents','search');
+$pagesWithMandatoryLogin = array('profile','events','myevents','search');
 
 // if the current page is one of the pages with mandatory login
 foreach ($pagesWithMandatoryLogin as $page) {
@@ -38,5 +38,11 @@ switch($currentPage){
 		break;
 	case 'search':
 		include'templates/search.php';
+		break;
+	case 'addevent':
+		include'templates/addevent.php';
+		break;
+	case 'profile':
+		include'templates/profile.php';
 		break;
 }

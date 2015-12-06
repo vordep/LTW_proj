@@ -1,5 +1,5 @@
 <?php
-include_once("config.php");
+
 include_once("connectdb.php");
 
 try{
@@ -20,6 +20,7 @@ try{
 }catch(PDOException $e) {
 	echo $e->getMessage();
 }
+
 exit();
 ?>
 

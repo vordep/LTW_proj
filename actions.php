@@ -14,6 +14,12 @@ switch($action){
     case'signOut':
         include'php/signOut.php';
         break;
+    case'addevent':
+        include 'php/addevent.php';
+        break;
+    case'editpassword':
+        include 'php/editPassword';
+        break;
     
     default:
         break;

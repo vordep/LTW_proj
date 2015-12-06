@@ -3,20 +3,19 @@
 
 <body>
   <?php include 'navbar.php';?>
-  
     <div id="container-main">
       <div class="search">
-        <form action="php/search.php" method="post">
+        <form action="index.php?page=search" method="post">
           <input type="text" placeholder="Search . . . " name="inputSearch">
 
         </form>
       </div>
-      <?php if(isset($_POST)) { ?>
-      <div class="results-container">
+      <?php if(isset($_POST)) : ?>
       
+      <div class="results-container">
        <?php include 'php/search.php';?>
           <div class="cards">
-            <?php foreach ($events as $current) { ?>
+            <?php foreach ($events as $current):  ?>
               <div class="card-placeholder">
                 <div class="card-placeholder-container">
                   <a href=<?="index.php?page=viewEvent&id=" .$current[ 'idEvent'] . "&previous=Feed";?>;>
@@ -25,10 +24,10 @@
                             </a>
                 </div>
               </div>
-              <?php } ?>
+              <?php endforeach; ?>
           </div>
          
       </div>
-       <?php } ?>
+       <?php endif; ?>
     </div>
 </body>

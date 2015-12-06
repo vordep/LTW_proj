@@ -10,5 +10,5 @@
 		<title>Eventus</title>
 		<!-- Custom styles for this template -->
 		<link href="assets/css/footer.css" rel="stylesheet">
-
+		<link href="assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

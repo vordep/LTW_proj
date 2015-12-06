@@ -16,12 +16,12 @@ try{
      
         $stmt->execute(array($idEvent));
     
-        $stmt = $db->prepare('SELECT category FROM category WHERE idCategory = ?');
+        $stmt = $db->prepare('SELECT type FROM type WHERE idType = ?');
     
-        $stmt->execute(array($event['idCategory']));
+        $stmt->execute(array($event['idType']));
     
     
-        $event['category'] = $stmt ->fetch()['category'];
+        $event['type'] = $stmt ->fetch()['type'];
     
         $user =$db->prepare('SELECT username FROM user WHERE idUser = ?');
         $user->execute (array($event['idUser']));

@@ -9,9 +9,9 @@
         <i class="fa fa-user"></i>
         <span>Profile</span>
     </a>
-    <a href="index.php?page=myEvents">
+    <a href="index.php?page=myevents">
         <i class="fa fa-bars"></i>
-        <span>Events</span></a>
+        <span>My Events</span></a>
     <a href="index.php?page=search">
         <i class="fa fa-search"></i>
         <span>Search</span>
