@@ -1,7 +1,7 @@
 	<link href="assets/css/profile.css" rel="stylesheet">
 </head>
 <body>
-	<?php include 'navbar.php'; ?>
+	<?php include 'navbar.php';?>
 
 	<div id="container-main">
 		

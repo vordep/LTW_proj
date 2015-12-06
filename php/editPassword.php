@@ -3,8 +3,23 @@ include_once("connectdb.php");
 
 try {	
 	$currentUsername = $_SESSION['username'];
+	$actualPassword = $_POST["actualPassword"];
 	$newPassword = $_POST["newPassword"];
 	$newPasswordConfirmation = $_POST["newPasswordConfirmation"];
+
+	$stmt = $dbh->prepare(
+		'SELECT password
+		FROM User
+		WHERE idUser = ?');
+
+	$stmt->execute($_SESSION['idUser']);
+	$trueActualPWD=$stmt->fetch();
+
+	if($trueActualPWD !== $actualPassword){
+		$_SESSION['responseContent'] = 'Wrong current password';
+		header("Location: index.php?page=profile");
+		exit();
+	}
 
 	if ($newPassword !== $newPasswordConfirmation) {
 		$_SESSION['responseContent'] = 'Passwords don''t match.';
@@ -27,6 +42,7 @@ try {
 	echo $e->getMessage();
 	$_SESSION['responseContent'] = 'Could not update database, please try again later.';
 }
+
 header("Location: index.php?page=profile");
 exit;
 ?>

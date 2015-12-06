@@ -7,7 +7,7 @@ try{
     //check if the passwords are the same
     if($password !==$confirm_password ){
         $_SESSION['responseContent']='Password are not the same';
-        header("Location : index.php?page=signUp.php");
+        header("Location: index.php?page=signUp.php");
         exit;
     }
      
@@ -18,7 +18,7 @@ try{
     $stmt->execute(array($username));
     if($stmt->fetch()){
           $_SESSION['responseContent']='Username already exists';
-        header("Location : index.php?page=signUp.php");
+        header("Location: index.php?page=signUp.php");
         exit;
     }
 
@@ -34,7 +34,7 @@ try{
     
     if(!($user = $stmt->fetch())) {
         $_SESSION['responseContent'] = 'Invalid username or password';
-        header("Location : index.php?page=signIn");
+        header("Location: index.php?page=signUp");
         exit;
     }
  
@@ -47,10 +47,10 @@ catch(PDOException $e){
     echo "here 222";
     echo $e->getMessage();
     $_SESSION['responseContent']='Could not update database';
-    header("Location : index.php?page=signUp");
+    header("Location: index.php?page=signUp");
     exit();
 }
 echo "here";
-header ("Location:index.php?page=events");
+header ("Location: index.php?page=events");
 exit();
 ?>

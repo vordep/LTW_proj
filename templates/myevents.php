@@ -1,5 +1,5 @@
 <link href="assets/css/main.css" rel="stylesheet">
-</<head>
+</head>
 
 <body>
     <?php include 'navbar.php';?>
