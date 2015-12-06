@@ -4,13 +4,26 @@ try{
     if(!isset($_POST)){
         die();
     }
-    $isPublic=$_POST['isPublic'] != '' | 0;
+     
+    if(!isset($_POST['isPublic'])){
+        $_POST['isPublic']=1;
+    }
+    if($_POST['isPublic']==1 || $_POST['isPublic']==''){
+        $isPublic=1;
+    }
+    else{
+        $isPublic=0;
+    }
     $idType = $_POST["inputType"];
     $date=$_POST["date"];
-    if($_FILES["event-pic"]["name"] != ''){
-        $image = uniqid() . "-" . $_FILES["poll-pic"]["name"];
-		move_uploaded_file($_FILES["poll-pic"]["tmp_name"], UPLOADS_PATH . "/$image");
-	} else $image = '';
+    if(!isset($_FILES["event-image"]))
+    {
+        $image = '';
+    }
+    if($_FILES["event-image"]["name"] != ''){
+        $image = uniqid() . "-" . $_FILES["event-image"]["name"];
+		move_uploaded_file($_FILES["event-image"]["tmp_name"], UPLOADS_PATH . "/$image");
+	}
     
     $title = $_POST["title"];
     $text = $_POST["description"];

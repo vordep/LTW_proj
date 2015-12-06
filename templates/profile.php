@@ -1,9 +1,9 @@
 	<link href="assets/css/profile.css" rel="stylesheet">
 </head>
 <body>
-	<?php include 'navbar.php';?>
+	<?php include 'navbar.php'; ?>
 
-	<div id="container-main">
+	<div class="container-main">
 		
 			<h1 class="page-header">Profile</h1>
 			<h1 class="profile-greeting">Welcome, <?= $_SESSION['username'] ?>.</h1>
