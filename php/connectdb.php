@@ -1,9 +1,3 @@
-/*
-    Connection to database 
-    
-*/
-
-
 <?php
 try {
 	$db = new PDO('sqlite:' . DB_PATH . '/database.db'); 
