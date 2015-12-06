@@ -3,7 +3,7 @@
 <body>
 	<?php include 'navbar.php'; ?>
 
-	<div class="container-main">
+	<div id="container-main">
 		
 			<h1 class="page-header">Profile</h1>
 			<h1 class="profile-greeting">Welcome, <?= $_SESSION['username'] ?>.</h1>
