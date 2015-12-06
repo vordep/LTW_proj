@@ -2,8 +2,10 @@ DROP TABLE IF EXISTS User;
 CREATE TABLE User(
 		idUser INTEGER PRIMARY KEY AUTOINCREMENT,
 		username VARCHAR2(50),
-		password VARCHAR2(250),
-		registerDate DATE
+		password VARCHAR2(255),
+		image VARCHAR2(255),
+		registerDate DATE,
+		lastLogin DATE
 );
 
 DROP TABLE IF EXISTS Event;
