@@ -23,10 +23,9 @@ try{
     
         $event['type'] = $stmt ->fetch()['type'];
     
-        $user1 =$db->prepare('SELECT username FROM user WHERE idUser = ?');
-        $user1->execute (array($event['idUser']));
-        $user = $user1->fetch();
-        $event['author'] = $user['username'];
+        $user =$db->prepare('SELECT username FROM user WHERE idUser = ?');
+        $user->execute (array($event['idUser']));
+        
         array_push($events,$event);
     }
 } catch(PDOException $e){
