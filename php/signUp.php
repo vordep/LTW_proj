@@ -50,10 +50,18 @@ catch(PDOException $e){
     echo "here 222";
     echo $e->getMessage();
     $_SESSION['responseContent']='Could not update database';
+<<<<<<< HEAD
     header("Location: index.php?page=signUp");
     exit();
 }
 echo "here";
 header ("Location: index.php?page=events");
+=======
+    header("Location : index.php?page=signUp");
+    exit();
+}
+echo "here";
+header ("Location:index.php?page=events");
+>>>>>>> origin/master
 exit();
 ?>

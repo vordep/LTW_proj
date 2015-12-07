@@ -17,6 +17,7 @@ try{
         $user = $temp->fetch();
         $searchresult['author'] = $user['username'];
     }
+<<<<<<< HEAD
     
     echo("here");
 }catch(PDOException $e) {
@@ -24,6 +25,12 @@ try{
     
 }
 header("Location: index.php?page=search");
+=======
+}catch(PDOException $e) {
+	echo $e->getMessage();
+}
+
+>>>>>>> origin/master
 exit();
 ?>
 

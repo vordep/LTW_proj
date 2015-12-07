@@ -16,11 +16,19 @@ try{
     }
     $idType = $_POST["inputType"];
     $date=$_POST["date"];
+<<<<<<< HEAD
     if(!isset($_FILES["eventimage"]["name"]))
     {
         $image = '';
     }
     if($_FILES['eventimage']["name"] != ''){
+=======
+    if(!isset($_FILES["event-image"]))
+    {
+        $image = '';
+    }
+    if($_FILES["event-image"]["name"] != ''){
+>>>>>>> origin/master
         $image = uniqid() . "-" . $_FILES["event-image"]["name"];
 		move_uploaded_file($_FILES["event-image"]["tmp_name"], UPLOADS_PATH . "/$image");
 	}

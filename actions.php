@@ -18,6 +18,7 @@ switch($action){
         include 'php/addevent.php';
         break;
     case'editpassword':
+<<<<<<< HEAD
         include 'php/editPassword.php';
         break;
     case 'search':
@@ -27,6 +28,14 @@ switch($action){
     default:
         break;
     
+=======
+        include 'php/editPassword';
+        break;
+    
+    default:
+        break;
+    
+>>>>>>> origin/master
     
 }
 ?>

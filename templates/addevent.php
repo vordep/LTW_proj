@@ -32,7 +32,11 @@
 
 				</div>
 				<div class="event-image">
+<<<<<<< HEAD
 					<input type="file" name="eventimage" value='' enctype="multipart/form-data">
+=======
+					<input type="file" name="event-image">
+>>>>>>> origin/master
 				</div>
 			</div>
 			<div class="modal-footer">

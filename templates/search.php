@@ -3,6 +3,7 @@
 
 <body>
   <?php include 'navbar.php';?>
+<<<<<<< HEAD
    
     <div id="container-main">
       <div class="search">
@@ -17,6 +18,19 @@
       
       <div class="results-container">
        
+=======
+    <div id="container-main">
+      <div class="search">
+        <form action="index.php?page=search" method="post">
+          <input type="text" placeholder="Search . . . " name="inputSearch">
+
+        </form>
+      </div>
+      <?php if(isset($_POST)) : ?>
+      
+      <div class="results-container">
+       <?php include 'php/search.php';?>
+>>>>>>> origin/master
           <div class="cards">
             <?php foreach ($events as $current):  ?>
               <div class="card-placeholder">

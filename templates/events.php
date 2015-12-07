@@ -19,7 +19,11 @@
                                 </div>
                                 <h4><?= $current['title']; ?></h4>
 						<span > by
+<<<<<<< HEAD
 							<a id="my-profile" class="text-muted" href=<?="index.php?page=otherUserProfile&id=" . $current['idUser'] ?>>
+=======
+							<a id="my-profile" class="text-muted" href>
+>>>>>>> origin/master
 								<?=' '.$current['author'];?>
 							</a>
 						</span>
