@@ -1,11 +1,5 @@
-
-/* 
-Sign in
-*/
-
-
 <?php
-include_once("connect.php");
+include_once("connectdb.php");
 
 try{
     $username= $_POST["inputUserName"];
@@ -27,7 +21,10 @@ try{
     $_SESSION['idUser'] = $user['idUser'];
 	$_SESSION['username'] = $username;
 	$_SESSION['image'] = $user['image'];
-    echo"here3";
+    
+    $data=date('Y-m-d H:i:s');
+    $_SESSION['registerDate'] = $user['registerDate'];
+    $_SESSION['lastLogin'] = $data;
 }
 catch (PDOException $e) {
 	die($e->getMessage());

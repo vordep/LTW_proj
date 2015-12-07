@@ -1,10 +1,5 @@
-/*
-Sign up
-*/
-
-
 <?php
-include_once("connect.php");
+include_once("connectdb.php");
 try{
     $username = $_POST["inputUserName"];
     $password =$_POST["inputPassword"];
@@ -12,10 +7,10 @@ try{
     //check if the passwords are the same
     if($password !==$confirm_password ){
         $_SESSION['responseContent']='Password are not the same';
-        header("Location : index.php?page=signUp.php");
+        header("Location: index.php?page=signUp");
         exit;
     }
-     echo "here2";
+     
     //check if the username exists
     $stmt = $db->prepare(
         'SELECT * FROM User 
@@ -23,7 +18,7 @@ try{
     $stmt->execute(array($username));
     if($stmt->fetch()){
           $_SESSION['responseContent']='Username already exists';
-        header("Location : index.php?page=signUp.php");
+        header("Location: index.php?page=signUp");
         exit;
     }
 
@@ -39,22 +34,26 @@ try{
     
     if(!($user = $stmt->fetch())) {
         $_SESSION['responseContent'] = 'Invalid username or password';
-        header("Location : index.php?page=signIn");
+        header("Location: index.php?page=signIn");
         exit;
     }
-    echo "here 4 ";
+ 
     //set _Session
     $_SESSION['idUser'] = $user['idUser'];
 	$_SESSION['username'] = $username;
+    $data=date('Y-m-d H:i:s');
+    $_SESSION['registerDate'] = $user['registerDate'];
+    $_SESSION['lastLogin'] = $data;
 
 }
 catch(PDOException $e){
     echo "here 222";
     echo $e->getMessage();
     $_SESSION['responseContent']='Could not update database';
-    header("Location : index.php?page=signUp");
-    exit;
+    header("Location: index.php?page=signUp");
+    exit();
 }
-header("Location index.php?page=events");
-exit;
+echo "here";
+header ("Location: index.php?page=events");
+exit();
 ?>
