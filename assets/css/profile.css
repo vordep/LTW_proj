@@ -1,0 +1,62 @@
+body {
+	background: #F5DEB3;
+}
+
+#container-main{
+    margin-left: 50px;
+    background-color: #F5DEB3;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/*
+* profile page
+*/
+.page-header {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.profile-pic img {
+	border-radius: 50px;
+	/*0margin-bottom: 5%;*/
+}
+.profile-pic img:hover {
+	box-shadow: 0 0 1em gray;
+}
+
+#wrap{
+	padding-bottom: 30px;
+}
+
+.signInformation {
+	position: absolute;
+	padding-top: 30px;
+	/*bottom: 0;*/
+}
+.signInformation h5 {
+	margin: 0 0 15px 0;
+}
+
+
+/*
+* profile picture upload
+*/
+.fileinput-button {
+	position: relative;
+	overflow: hidden;
+}
+.fileinput-button input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	opacity: 0;
+	-ms-filter: 'alpha(opacity=0)';
+	font-size: 200px;
+	direction: ltr;
+	cursor: pointer;
+}
+
